@@ -59,9 +59,15 @@
 
 ;; paredit
 (require 'paredit)
+(add-hook 'lisp-mode-hook 'paredit-mode)
+(add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
 ;; hl-sexp
 (require 'hl-sexp)
+(global-hl-sexp-mode)
+
+;;show-paren-mode
+(show-paren-mode)
 
 ;; clojure
 (require 'clojure-mode)
@@ -72,7 +78,6 @@
      (defun clojure-indent-hook () 
        (define-clojure-indent (clone-for 1) (at 1)))
      (add-hook 'clojure-mode-hook 'clojure-indent-hook)
-     (add-hook 'clojure-mode-hook 'hl-sexp-mode)
      (define-key clojure-mode-map "{" 'paredit-open-curly)
      (define-key clojure-mode-map "}" 'paredit-close-curly)))
 (eval-after-load 'clojure-mode
@@ -84,16 +89,15 @@
 (eval-after-load 'clojure-mode
   '(font-lock-add-keywords
     'clojure-mode `(("\\(#\\)("
-                     (0 (progn (compose-region (match-beginning 1)
-                                               (match-end 1) "ƒ")
-                               nil))))))
+		     (0 (progn (compose-region (match-beginning 1)
+					       (match-end 1) "ƒ")
+			       nil))))))
 (eval-after-load 'clojure-mode
   '(font-lock-add-keywords
     'clojure-mode `(("\\(#\\){"
-                     (0 (progn (compose-region (match-beginning 1)
-                                               (match-end 1) "∈")
-                               nil))))))
-
+		     (0 (progn (compose-region (match-beginning 1)
+					       (match-end 1) "∈")
+			       nil))))))
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
