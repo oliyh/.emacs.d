@@ -17,7 +17,9 @@
 ;; color-theme
 (require 'color-theme)
 (load-file "~/.emacs.d/elpa/color-theme-twilight-0.1/color-theme-twilight.el")
+(load-file "~/.emacs.d/elpa/color-theme-github-0.0.3/color-theme-github.el")
 ;;(color-theme-twilight)
+(color-theme-github)
 
 ;; auto-complete
 (require 'auto-complete-config)
