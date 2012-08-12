@@ -7,6 +7,10 @@
 
 ;; ------------------------
 
+;; < emacs24
+
+;; (load-file "~/.emacs.d/package.el")
+
 ;; marmelade
 (require 'package)
 (add-to-list 'package-archives 
