@@ -8,7 +8,6 @@
 ;; ------------------------
 
 ;; < emacs24
-
 ;; (load-file "~/.emacs.d/package.el")
 
 ;; marmelade
@@ -67,11 +66,15 @@
 ;; paredit
 (require 'paredit)
 (add-hook 'lisp-mode-hook 'paredit-mode)
+(add-hook 'scheme-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 
 ;; hl-sexp
 (require 'hl-sexp)
-(global-hl-sexp-mode)
+(add-hook 'lisp-mode-hook 'hl-sexp-mode)
+(add-hook 'scheme-mode-hook 'hl-sexp-mode)
+(add-hook 'emacs-lisp-mode-hook 'hl-sexp-mode)
+(add-hook 'clojure-mode-hook 'hl-sexp-mode)
 
 ;;show-paren-mode
 (show-paren-mode)
