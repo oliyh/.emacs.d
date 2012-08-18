@@ -1,6 +1,7 @@
 (custom-set-variables
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
+ '(menu-bar-mode nil)
  '(inhibit-startup-message t)
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido)))
