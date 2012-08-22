@@ -1,7 +1,7 @@
 (custom-set-variables
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
- '(menu-bar-mode nil)
+ '(menu-bar-mode t)
  '(inhibit-startup-message t)
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido)))
@@ -169,7 +169,10 @@
   (let ((current-value (frame-parameter nil 'fullscreen)))
    (set-frame-parameter nil 'fullscreen
                          (if (equal 'fullboth current-value)
-                             (if (boundp 'old-fullscreen) old-fullscreen nil)
+			     (progn 
+			       (menu-bar-mode t)
+			       (if (boundp 'old-fullscreen) old-fullscreen nil))
                            (progn (setq old-fullscreen current-value)
+				  (menu-bar-mode nil)
                                   'fullboth)))))
 (global-set-key [f11] 'toggle-fullscreen)
