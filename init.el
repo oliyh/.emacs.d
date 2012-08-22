@@ -18,6 +18,9 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; Cut and Paste
+(cua-mode)
+
 ;; color-theme
 (require 'color-theme)
 (require 'color-theme-sanityinc-solarized)
@@ -67,15 +70,15 @@
 ;; paredit
 (require 'paredit)
 (add-hook 'lisp-mode-hook 'paredit-mode)
-(add-hook 'scheme-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
+(add-hook 'scheme-mode-hook 'paredit-mode)
 
 ;; hl-sexp
 (require 'hl-sexp)
+(add-hook 'clojure-mode-hook 'hl-sexp-mode)
 (add-hook 'lisp-mode-hook 'hl-sexp-mode)
 (add-hook 'scheme-mode-hook 'hl-sexp-mode)
 (add-hook 'emacs-lisp-mode-hook 'hl-sexp-mode)
-(add-hook 'clojure-mode-hook 'hl-sexp-mode)
 
 ;;show-paren-mode
 (show-paren-mode)
@@ -109,6 +112,14 @@
 		     (0 (progn (compose-region (match-beginning 1)
 					       (match-end 1) "∈")
 			       nil))))))
+
+(eval-after-load 'clojure-mode
+  '(font-lock-add-keywords
+    'clojure-mode `(("\\(#\\)_"
+		     (0 (progn (compose-region (match-beginning 1)
+					       (match-end 1) "#")
+			       nil))))))
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
@@ -140,3 +151,25 @@
 
 ;; match parens
 (setq blink-matching-paren-distance nil)
+
+;; XML pretty print
+(defun pretty-print-xml-region (begin end)
+  (interactive "r")
+  (save-excursion
+    (nxml-mode)
+    (goto-char begin)
+    (while (search-forward-regexp "\>[ \\t]*\<" nil t)
+      (backward-char) (insert "\n"))
+    (indent-region begin end))
+  (message "Ah, much better!"))
+
+;; Fullscreen
+(defun toggle-fullscreen (&optional f)
+  (interactive)
+  (let ((current-value (frame-parameter nil 'fullscreen)))
+   (set-frame-parameter nil 'fullscreen
+                         (if (equal 'fullboth current-value)
+                             (if (boundp 'old-fullscreen) old-fullscreen nil)
+                           (progn (setq old-fullscreen current-value)
+                                  'fullboth)))))
+(global-set-key [f11] 'toggle-fullscreen)
