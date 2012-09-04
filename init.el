@@ -21,6 +21,14 @@
 ;; Cut and Paste
 (cua-mode)
 
+;; Magit key binding
+
+(global-set-key (kbd "C-c C-s") 'magit-status)
+
+;; rgrep key binding
+
+(global-set-key (kbd "C-c C-f") 'rgrep)
+
 ;; color-theme
 (require 'color-theme)
 (require 'color-theme-sanityinc-solarized)
