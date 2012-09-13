@@ -25,6 +25,10 @@
 
 (global-set-key (kbd "C-c C-s") 'magit-status)
 
+;; Mo-git-blame key binding
+
+(global-set-key (kbd "C-c C-b") 'mo-git-blame-current)
+
 ;; rgrep key binding
 
 (global-set-key (kbd "C-c C-f") 'rgrep)
