@@ -21,6 +21,9 @@
 ;; Cut and Paste
 (cua-mode)
 
+;; Auto revert
+(global-auto-revert-mode t)
+
 ;; Magit key binding
 
 (global-set-key (kbd "C-c C-s") 'magit-status)
