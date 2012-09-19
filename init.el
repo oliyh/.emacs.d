@@ -174,17 +174,3 @@
       (backward-char) (insert "\n"))
     (indent-region begin end))
   (message "Ah, much better!"))
-
-;; Fullscreen
-(defun toggle-fullscreen (&optional f)
-  (interactive)
-  (let ((current-value (frame-parameter nil 'fullscreen)))
-   (set-frame-parameter nil 'fullscreen
-                         (if (equal 'fullboth current-value)
-			     (progn 
-			       (menu-bar-mode t)
-			       (if (boundp 'old-fullscreen) old-fullscreen nil))
-                           (progn (setq old-fullscreen current-value)
-				  (menu-bar-mode nil)
-                                  'fullboth)))))
-(global-set-key [f11] 'toggle-fullscreen)
