@@ -4211,7 +4211,7 @@ If there is no default remote, ask for one."
       (magit-set branch-remote "branch" branch "remote")
       (magit-set (format "refs/heads/%s" merge-branch)
                  "branch" branch "merge"))
-    (apply 'magit-run-git-async "pull" "-v" magit-custom-options)))
+    (apply 'magit-run-git-async "pull" "--no-commit" "-v" magit-custom-options)))
 
 (eval-when-compile (require 'eshell))
 
