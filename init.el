@@ -135,6 +135,8 @@
 					       (match-end 1) "#")
 			       nil))))))
 
+(setq auto-mode-alist (cons '("\\.cljs$" . clojure-mode) auto-mode-alist))
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
