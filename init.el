@@ -153,6 +153,9 @@
 ;; truncate lines
 (set-default 'truncate-lines t)
 
+;; remove trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; spaces instead of tabs
 (setq indent-tabs-mode nil)
 (setq tab-width 3)
