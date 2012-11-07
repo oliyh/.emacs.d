@@ -18,22 +18,24 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; Window management / undo stuff
+;; C-c right/left
+(winner-mode)
+
 ;; Cut and Paste
+;; C-c C-v
 (cua-mode)
 
 ;; Auto revert
 (global-auto-revert-mode t)
 
 ;; Magit key binding
-
 (global-set-key (kbd "C-c C-s") 'magit-status)
 
 ;; Mo-git-blame key binding
-
 (global-set-key (kbd "C-c C-b") 'mo-git-blame-current)
 
 ;; rgrep key binding
-
 (global-set-key (kbd "C-c C-f") 'rgrep)
 
 ;; color-theme
