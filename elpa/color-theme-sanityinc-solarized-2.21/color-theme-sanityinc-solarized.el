@@ -6,7 +6,7 @@
 ;; Keywords: themes
 ;; X-URL: http://github.com/purcell/color-theme-sanityinc-solarized
 ;; URL: http://github.com/purcell/color-theme-sanityinc-solarized
-;; Version: 2.19
+;; Version: 2.21
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -245,6 +245,7 @@ names to which it refers are bound."
      (diredp-flag-mark-line ((,class (:background nil :inherit highlight))))
      (diredp-ignored-file-name ((,class (:foreground ,faintest))))
      (diredp-link-priv ((,class (:background nil :foreground ,violet))))
+     (diredp-mode-line-flagged ((,class (:foreground ,red))))
      (diredp-no-priv ((,class (:background nil))))
      (diredp-number ((,class (:foreground ,yellow))))
      (diredp-other-priv ((,class (:background nil :foreground ,magenta))))
@@ -255,6 +256,7 @@ names to which it refers are bound."
 
      ;; Magit (a patch is pending in magit to make these standard upstream)
      (magit-branch ((,class (:foreground ,green))))
+     (magit-header ((,class (:inherit nil :weight bold))))
      (magit-item-highlight ((,class (:inherit highlight :background nil))))
      (magit-log-graph ((,class (:foreground ,faintest))))
      (magit-log-sha1 ((,class (:foreground ,yellow))))
@@ -316,7 +318,6 @@ names to which it refers are bound."
      ;; Stop outline-3 from inheriting font-lock-keyword-face, which we've made bold
      (outline-3 ((,class (:inherit nil :foreground ,green))))
 
-     (org-date ((,class (:foreground ,blue :underline t))))
      (org-agenda-structure ((,class (:foreground ,violet))))
      (org-agenda-date ((,class (:foreground ,blue :underline nil))))
      (org-agenda-done ((,class (:foreground ,green))))
@@ -324,11 +325,16 @@ names to which it refers are bound."
      (org-block ((,class (:foreground ,orange))))
      (org-code ((,class (:foreground ,yellow))))
      (org-column ((,class (:background ,alt-background))))
+     (org-column-title ((,class (:inherit org-column :weight bold :underline t))))
+     (org-date ((,class (:foreground ,blue :underline t))))
      (org-document-info ((,class (:foreground ,cyan))))
      (org-document-info-keyword ((,class (:foreground ,green))))
      (org-document-title ((,class (:weight bold :foreground ,yellow :height 1.44))))
      (org-done ((,class (:foreground ,green))))
+     (org-ellipsis ((,class (:foreground ,faint))))
+     (org-footnote ((,class (:foreground ,cyan))))
      (org-formula ((,class (:foreground ,orange))))
+     (org-hide ((,class (:foreground ,background :background ,background))))
      (org-link ((,class (:foreground ,blue :underline t))))
      (org-scheduled ((,class (:foreground ,green))))
      (org-scheduled-previously ((,class (:foreground ,yellow))))
@@ -351,7 +357,7 @@ names to which it refers are bound."
 
      ;; js2-mode
      (js2-warning-face ((,class (:underline ,yellow))))
-     (js2-error-face ((,class (:underline ,red))))
+     (js2-error-face ((,class (:foreground nil :underline ,red))))
      (js2-external-variable-face ((,class (:foreground ,magenta))))
      (js2-function-param-face ((,class (:foreground ,blue))))
      (js2-instance-member-face ((,class (:foreground ,blue))))
@@ -359,7 +365,7 @@ names to which it refers are bound."
 
      ;; js3-mode
      (js3-warning-face ((,class (:underline ,yellow))))
-     (js3-error-face ((,class (:underline ,red))))
+     (js3-error-face ((,class (:foreground nil :underline ,red))))
      (js3-external-variable-face ((,class (:foreground ,magenta))))
      (js3-function-param-face ((,class (:foreground ,blue))))
      (js3-jsdoc-tag-face ((,class (:foreground ,magenta))))
@@ -395,6 +401,26 @@ names to which it refers are bound."
      (message-header-name ((,class (:inherit header-line :foreground ,green :background nil))))
      (message-header-newsgroups ((,class (:foreground ,cyan :background nil :slant normal))))
      (message-separator ((,class (:foreground ,magenta))))
+
+     ;; Jabber
+     (jabber-chat-prompt-local ((,class (:foreground ,yellow))))
+     (jabber-chat-prompt-foreign ((,class (:foreground ,orange))))
+     (jabber-chat-prompt-system ((,class (:foreground ,yellow :weight bold))))
+     (jabber-chat-text-local ((,class (:foreground ,yellow))))
+     (jabber-chat-text-foreign ((,class (:foreground ,orange))))
+     (jabber-chat-text-error ((,class (:foreground ,red))))
+
+     (jabber-roster-user-online ((,class (:foreground ,green))))
+     (jabber-roster-user-xa ((,class :foreground ,faint)))
+     (jabber-roster-user-dnd ((,class :foreground ,yellow)))
+     (jabber-roster-user-away ((,class (:foreground ,orange))))
+     (jabber-roster-user-chatty ((,class (:foreground ,violet))))
+     (jabber-roster-user-error ((,class (:foreground ,red))))
+     (jabber-roster-user-offline ((,class (:foreground ,faint))))
+
+     (jabber-rare-time-face ((,class (:foreground ,faint))))
+     (jabber-activity-face ((,class (:foreground ,violet))))
+     (jabber-activity-personal-face ((,class (:foreground ,cyan))))
 
      ;; Gnus
      (gnus-cite-1 ((,class (:inherit outline-1 :foreground nil))))
