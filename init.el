@@ -13,7 +13,7 @@
 
 ;; marmelade
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
@@ -65,6 +65,14 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'slime-repl-mode))
 
+;; ac-nrepl
+(require 'ac-nrepl)
+(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'nrepl-mode))
+(define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
+
 ;; slime repl
 (defun setup-slime-repl-paredit ()
   (define-key slime-repl-mode-map
@@ -106,7 +114,7 @@
   '(progn
      (defun clojure-paredit-hook () (paredit-mode +1))
      (add-hook 'clojure-mode-hook 'clojure-paredit-hook)
-     (defun clojure-indent-hook () 
+     (defun clojure-indent-hook ()
        (define-clojure-indent (clone-for 1) (at 1)))
      (add-hook 'clojure-mode-hook 'clojure-indent-hook)
      (define-key clojure-mode-map "{" 'paredit-open-curly)
