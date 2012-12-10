@@ -100,30 +100,13 @@
   '(add-to-list 'ac-modes 'nrepl-mode))
 (define-key nrepl-interaction-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc)
 
-;; slime repl
-(defun setup-slime-repl-paredit ()
-  (define-key slime-repl-mode-map
-    (kbd "DEL") 'paredit-backward-delete)
-  (define-key slime-repl-mode-map
-    (kbd "{") 'paredit-open-curly)
-  (define-key slime-repl-mode-map
-    (kbd "}") 'paredit-close-curly)
-  (modify-syntax-entry ?\{ "(}")
-  (modify-syntax-entry ?\} "){")
-  (modify-syntax-entry ?\[ "(]")
-  (modify-syntax-entry ?\] ")[")
-  (modify-syntax-entry ?~ "'   ")
-  (modify-syntax-entry ?, "    ")
-  (modify-syntax-entry ?^ "'")
-  (modify-syntax-entry ?= "'"))
-(add-hook 'slime-repl-mode-hook 'setup-slime-repl-paredit)
-(add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
-
 ;; paredit
 (require 'paredit)
 (add-hook 'lisp-mode-hook 'paredit-mode)
 (add-hook 'emacs-lisp-mode-hook 'paredit-mode)
 (add-hook 'scheme-mode-hook 'paredit-mode)
+(add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
+(add-hook 'nrepl-mode-hook 'enable-paredit-mode)
 
 ;; hl-sexp
 (require 'hl-sexp)
