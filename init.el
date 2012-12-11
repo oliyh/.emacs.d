@@ -68,10 +68,6 @@
 ;; color-theme
 (require 'color-theme)
 (require 'color-theme-sanityinc-solarized)
-(load-file "~/.emacs.d/elpa/color-theme-twilight-0.1/color-theme-twilight.el")
-(load-file "~/.emacs.d/elpa/color-theme-github-0.0.3/color-theme-github.el")
-;;(color-theme-twilight)
-;;(color-theme-github)
 (color-theme-sanityinc-solarized-light)
 ;;(color-theme-sanityinc-solarized-dark)
 
