@@ -70,6 +70,8 @@
 (require 'color-theme-sanityinc-solarized)
 (color-theme-sanityinc-solarized-light)
 ;;(color-theme-sanityinc-solarized-dark)
+(require 'color-theme-zenburn)
+;;(color-theme-zenburn)
 
 ;; auto-complete
 (require 'auto-complete-config)
