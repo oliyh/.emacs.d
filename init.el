@@ -26,9 +26,6 @@
 ;; C-c C-v
 (cua-mode)
 
-;; Auto revert
-(global-auto-revert-mode t)
-
 ;; Magit key binding
 (global-set-key (kbd "C-c C-g") 'magit-status)
 
@@ -164,6 +161,12 @@
 
 ;; ------------------------
 ;; stuff
+
+;; frame title
+(setq frame-title-format "%b")
+
+;; Auto revert
+(global-auto-revert-mode t)
 
 ;; scrolling
 (setq scroll-step 1)
