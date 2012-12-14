@@ -2,3 +2,5 @@
 *.elc
 *.dat
 swank/*
+eshell/*
+/.mc-lists.el
