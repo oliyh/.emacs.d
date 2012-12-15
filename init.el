@@ -193,6 +193,9 @@
 ;; match parens
 (setq blink-matching-paren-distance nil)
 
+;; ERC
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))
+
 ;; XML pretty print
 (defun pretty-print-xml-region (begin end)
   (interactive "r")
