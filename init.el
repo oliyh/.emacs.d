@@ -110,6 +110,13 @@
 (add-hook 'scheme-mode-hook 'hl-sexp-mode)
 (add-hook 'emacs-lisp-mode-hook 'hl-sexp-mode)
 
+;; idle-highlight-mode
+(require 'idle-highlight-mode)
+(add-hook 'clojure-mode-hook 'idle-highlight-mode)
+(add-hook 'lisp-mode-hook 'idle-highlight-mode)
+(add-hook 'scheme-mode-hook 'idle-highlight-mode)
+(add-hook 'emacs-lisp-mode-hook 'idle-highlight-mode)
+
 ;;show-paren-mode
 (show-paren-mode)
 
