@@ -15,4 +15,4 @@
 ;; no-update-autoloads: t
 ;; coding: utf-8
 ;; End:
-;;; color-theme0zenburn-autoloads.el ends here
+;;; color-theme-zenburn-autoloads.el ends here

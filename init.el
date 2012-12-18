@@ -127,6 +127,9 @@
 ;;show-paren-mode
 (show-paren-mode)
 
+;; gambit
+(require 'gambit)
+
 ;; clojure
 (require 'clojure-mode)
 (eval-after-load "clojure-mode"
