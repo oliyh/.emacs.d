@@ -26,6 +26,13 @@
 ;; C-c C-v
 (cua-mode)
 
+;; undo-tree
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+;; IDO
+(require 'ido)
+
 ;; Magit key binding
 (global-set-key (kbd "C-c C-g") 'magit-status)
 
@@ -159,12 +166,20 @@
 
 (setq auto-mode-alist (cons '("\\.cljs$" . clojure-mode) auto-mode-alist))
 
-;; undo-tree
-(require 'undo-tree)
-(global-undo-tree-mode)
+;; Write backup files to own directory
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name
+                 (concat user-emacs-directory "backups")))))
 
-;; IDO
-(require 'ido)
+;; Make backups of files, even when they're in version control
+(setq vc-make-backup-files t)
+
+;; Save point position between sessions
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file (expand-file-name ".places" user-emacs-directory))
+
+;; Back
 
 ;; ------------------------
 ;; stuff

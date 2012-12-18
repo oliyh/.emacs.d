@@ -3,4 +3,5 @@
 *.dat
 swank/*
 eshell/*
+.places
 /.mc-lists.el
