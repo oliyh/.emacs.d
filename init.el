@@ -129,6 +129,7 @@
 
 ;; gambit
 (require 'gambit)
+(setq scheme-program-name "gsi -:s,d-")
 
 ;; clojure
 (require 'clojure-mode)
