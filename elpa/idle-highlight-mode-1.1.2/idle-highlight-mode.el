@@ -60,15 +60,9 @@
  :group 'faces)
 
 (defface idle-highlight
-  '((((type tty))
-     (:bold t))
-    (((class color) (background light))
-     (:background "lightgray"))
-    (((class color) (background dark))
-     (:background "gray10"))
-    (t (:bold t)))
-  "Face used to highlight other occurrences of the word at point."
-  :group 'idle-highlight)
+ '((t (:inherit highlight)))
+ "Face used to highlight other occurrences of the word at point."
+ :group 'idle-highlight)
 
 (defvar idle-highlight-regexp nil
  "Buffer-local regexp to be idle-highlighted.")
