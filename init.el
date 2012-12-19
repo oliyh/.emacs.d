@@ -127,9 +127,10 @@
 ;;show-paren-mode
 (show-paren-mode)
 
-;; gambit
-(require 'gambit)
-(setq scheme-program-name "gsi -:s,d-")
+;; Scheme; gambit / chicken / petite
+;;(setq scheme-program-name "gsi -:s,d-")
+(setq scheme-program-name "csi")
+;;(setq scheme-program-name "petite")
 
 ;; clojure
 (require 'clojure-mode)
@@ -182,8 +183,6 @@
 (require 'saveplace)
 (setq-default save-place t)
 (setq save-place-file (expand-file-name "places" user-emacs-directory))
-
-;; Back
 
 ;; ------------------------
 ;; stuff

@@ -4,5 +4,6 @@
 swank/*
 eshell/*
 elpa/archives/*
+url/*
 places
 /.mc-lists.el
