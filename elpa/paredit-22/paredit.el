@@ -439,7 +439,7 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
    ("M-("       paredit-wrap-round
                 ("(foo |bar baz)"
                  "(foo (|bar) baz)"))
-   ("M-s"       paredit-splice-sexp
+   ("M-S"       paredit-splice-sexp
                 ("(foo (bar| baz) quux)"
                  "(foo bar| baz quux)"))
    (("M-<up>" "ESC <up>")
@@ -450,7 +450,7 @@ Paredit behaves badly if parentheses are imbalanced, so exercise
                 paredit-splice-sexp-killing-forward
                 ("(a (b c| d e) f)"
                  "(a b c f)"))
-   ("M-r"       paredit-raise-sexp
+   ("M-R"       paredit-raise-sexp
                 ("(dynamic-wind in (lambda () |body) out)"
                  "(dynamic-wind in |body out)"
                  "|body"))
