@@ -6,4 +6,5 @@ eshell/*
 elpa/archives/*
 url/*
 places
+slime-history
 /.mc-lists.el

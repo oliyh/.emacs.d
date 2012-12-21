@@ -132,6 +132,8 @@
 (setq scheme-program-name "csi")
 ;;(setq scheme-program-name "petite")
 
+(setq slime-repl-history-file "~/.emacs.d/slime-history")
+
 ;; clojure
 (require 'clojure-mode)
 (eval-after-load "clojure-mode"
