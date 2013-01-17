@@ -124,8 +124,20 @@
 (add-hook 'scheme-mode-hook 'idle-highlight-mode)
 (add-hook 'emacs-lisp-mode-hook 'idle-highlight-mode)
 
-;;show-paren-mode
+;; show-paren-mode
 (show-paren-mode)
+
+;; xcscope
+(require 'xcscope)
+(setq cscope-do-not-update-database t)
+
+;; global
+;;(require 'gtags)
+;;(add-hook 'c-mode-hook '(lambda () (gtags-mode t)))
+;;(add-hook 'c++-mode-hook '(lambda () (gtags-mode t)))
+
+;; semantc
+(semantic-mode)
 
 ;; Scheme; gambit / chicken / petite
 ;;(setq scheme-program-name "gsi -:s,d-")

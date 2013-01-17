@@ -4,6 +4,7 @@
 swank/*
 eshell/*
 elpa/archives/*
+semanticdb/*
 url/*
 places
 slime-history
