@@ -131,11 +131,6 @@
 (require 'xcscope)
 (setq cscope-do-not-update-database t)
 
-;; global
-;;(require 'gtags)
-;;(add-hook 'c-mode-hook '(lambda () (gtags-mode t)))
-;;(add-hook 'c++-mode-hook '(lambda () (gtags-mode t)))
-
 ;; semantc
 (semantic-mode)
 
