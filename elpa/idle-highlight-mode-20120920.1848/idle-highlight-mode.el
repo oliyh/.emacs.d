@@ -60,7 +60,7 @@
  :group 'faces)
 
 (defface idle-highlight
- '((t (:inherit region)))
+ '((t (:inherit highlight)))
  "Face used to highlight other occurrences of the word at point."
  :group 'idle-highlight)
 
