@@ -8,4 +8,5 @@ semanticdb/*
 url/*
 places
 slime-history
+nrepl-history
 /.mc-lists.el
