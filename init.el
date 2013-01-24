@@ -30,6 +30,9 @@
 ;; C-c C-v
 (cua-mode)
 
+;; server
+(server-start)
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
