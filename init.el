@@ -16,6 +16,7 @@
 (add-to-list 'package-archives
 	     '("marmalade" .
 	       "http://marmalade-repo.org/packages/"))
+;; melpa
 (add-to-list 'package-archives
 	     '("melpa" .
 	       "http://melpa.milkbox.net/packages/") t)
@@ -33,9 +34,6 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-;; IDO
-(require 'ido)
-
 ;; Magit key binding
 (global-set-key (kbd "C-c C-g") 'magit-status)
 
@@ -45,6 +43,17 @@
 
 ;; rgrep key binding
 (global-set-key (kbd "C-c C-f") 'rgrep)
+
+;; IDO
+(require 'ido)
+
+(global-set-key "\M-x"
+		(lambda ()
+		  (interactive)
+		  (call-interactively
+		   (intern
+		    (ido-completing-read "M-x "
+					 (all-completions "" obarray 'commandp))))))
 
 ;; ace jump mode
 (autoload
