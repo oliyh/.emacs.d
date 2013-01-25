@@ -38,7 +38,7 @@
 (cua-mode)
 
 ;; server
-(load "server")
+(require 'server)
 (unless (server-running-p) (server-start))
 
 ;; undo-tree
