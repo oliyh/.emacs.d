@@ -26,12 +26,20 @@
 ;; C-c right/left
 (winner-mode)
 
+;; WindMove
+;; move with C-c C-arrow keys
+(global-set-key (kbd "C-c <C-left>")  'windmove-left)
+(global-set-key (kbd "C-c <C-right>") 'windmove-right)
+(global-set-key (kbd "C-c <C-up>")    'windmove-up)
+(global-set-key (kbd "C-c <C-down>")  'windmove-down)
+
 ;; Cut and Paste
 ;; C-c C-v
 (cua-mode)
 
 ;; server
-(server-start)
+(load "server")
+(unless (server-running-p) (server-start))
 
 ;; undo-tree
 (require 'undo-tree)
