@@ -54,14 +54,11 @@
 
 ;; IDO
 (require 'ido)
-
-(global-set-key "\M-x"
-		(lambda ()
-		  (interactive)
-		  (call-interactively
-		   (intern
-		    (ido-completing-read "M-x "
-					 (all-completions "" obarray 'commandp))))))
+(global-set-key
+ "\M-x"
+ (lambda ()
+   (interactive) (call-interactively
+		  (intern (ido-completing-read "M-x " (all-completions "" obarray 'commandp))))))
 
 ;; ace jump mode
 (autoload
