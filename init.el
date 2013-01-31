@@ -89,9 +89,11 @@
 ;; color-theme
 (require 'color-theme)
 (require 'color-theme-sanityinc-solarized)
+(require 'color-theme-sanityinc-tomorrow)
+(require 'color-theme-zenburn)
 (color-theme-sanityinc-solarized-light)
 ;;(color-theme-sanityinc-solarized-dark)
-(require 'color-theme-zenburn)
+;;(color-theme-sanityinc-tomorrow-night)
 ;;(color-theme-zenburn)
 
 ;; auto-complete
