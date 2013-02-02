@@ -4,8 +4,8 @@
 
 
 ;;;### (autoloads (mc/edit-beginnings-of-lines mc/edit-ends-of-lines
-;;;;;;  mc/edit-lines) "mc-edit-lines" "mc-edit-lines.el" (20746
-;;;;;;  50878))
+;;;;;;  mc/edit-lines) "mc-edit-lines" "mc-edit-lines.el" (20749
+;;;;;;  4813))
 ;;; Generated autoloads from mc-edit-lines.el
 
 (autoload 'mc/edit-lines "mc-edit-lines" "\
@@ -28,7 +28,7 @@ Add one cursor to the beginning of each line in the active region.
 ;;;***
 
 ;;;### (autoloads (mc/insert-numbers) "mc-insert-numbers" "mc-insert-numbers.el"
-;;;;;;  (20746 50878))
+;;;;;;  (20749 4813))
 ;;; Generated autoloads from mc-insert-numbers.el
 
 (autoload 'mc/insert-numbers "mc-insert-numbers" "\
@@ -47,7 +47,7 @@ Add one cursor to the beginning of each line in the active region.
 ;;;;;;  mc/mark-previous-word-like-this mc/mark-previous-like-this
 ;;;;;;  mc/mark-next-symbol-like-this mc/mark-next-word-like-this
 ;;;;;;  mc/mark-next-like-this) "mc-mark-more" "mc-mark-more.el"
-;;;;;;  (20746 50878))
+;;;;;;  (20749 4813))
 ;;; Generated autoloads from mc-mark-more.el
 
 (autoload 'mc/mark-next-like-this "mc-mark-more" "\
@@ -173,7 +173,7 @@ Mark the tag we're in and its pair for renaming.
 ;;;***
 
 ;;;### (autoloads (set-rectangular-region-anchor) "rectangular-region-mode"
-;;;;;;  "rectangular-region-mode.el" (20746 50878))
+;;;;;;  "rectangular-region-mode.el" (20749 4813))
 ;;; Generated autoloads from rectangular-region-mode.el
 
 (autoload 'set-rectangular-region-anchor "rectangular-region-mode" "\
@@ -187,8 +187,8 @@ an exceedingly quick way of adding multiple cursors to multiple lines.
 ;;;***
 
 ;;;### (autoloads nil nil ("mc-cycle-cursors.el" "multiple-cursors-core.el"
-;;;;;;  "multiple-cursors-pkg.el" "multiple-cursors.el") (20746 50878
-;;;;;;  724947))
+;;;;;;  "multiple-cursors-pkg.el" "multiple-cursors.el") (20749 4813
+;;;;;;  962386))
 
 ;;;***
 

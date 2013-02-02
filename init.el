@@ -41,6 +41,10 @@
 (require 'server)
 (unless (server-running-p) (server-start))
 
+;; browse-kill-ring
+(require 'browse-kill-ring)
+(browse-kill-ring-default-keybindings)
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
