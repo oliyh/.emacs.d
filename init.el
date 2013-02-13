@@ -110,6 +110,10 @@
 (setq ac-quick-help-delay 1)
 (setq ac-quick-help-height 60)
 
+;; nREPL
+(require 'nrepl)
+(require 'nrepl-ritz)
+
 ;; ac-nrepl
 (require 'ac-nrepl)
 (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
