@@ -218,6 +218,9 @@
 ;; frame title
 (setq frame-title-format "%b")
 
+;; Columns
+(column-number-mode)
+
 ;; Auto revert
 (global-auto-revert-mode t)
 
