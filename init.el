@@ -56,9 +56,6 @@
 ;; git gutter
 (global-git-gutter-mode t)
 (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
-(setq git-gutter:modified-sign "  ")
-(setq git-gutter:added-sign "++")
-(setq git-gutter:deleted-sign "--")
 
 ;; rgrep key binding
 (global-set-key (kbd "C-c C-f") 'rgrep)
