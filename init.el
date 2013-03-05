@@ -54,7 +54,8 @@
 (global-set-key (kbd "C-c C-b") 'magit-blame-mode)
 
 ;; git gutter
-(global-git-gutter-mode t)
+(require 'git-gutter)
+;;(global-git-gutter-mode t)
 (global-set-key (kbd "C-x C-g") 'git-gutter:toggle)
 
 ;; rgrep key binding
