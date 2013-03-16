@@ -5,7 +5,7 @@
 
 ;;;### (autoloads (nrepl nrepl-jack-in nrepl-disable-on-existing-clojure-buffers
 ;;;;;;  nrepl-enable-on-existing-clojure-buffers nrepl-interaction-mode)
-;;;;;;  "nrepl" "nrepl.el" (20783 44179))
+;;;;;;  "nrepl" "nrepl.el" (20802 50898))
 ;;; Generated autoloads from nrepl.el
 
 (autoload 'nrepl-interaction-mode "nrepl" "\
@@ -45,7 +45,7 @@ Connect nrepl to HOST and PORT.
 
 ;;;***
 
-;;;### (autoloads nil nil ("nrepl-pkg.el") (20783 44179 724903))
+;;;### (autoloads nil nil ("nrepl-pkg.el") (20802 50898 501493))
 
 ;;;***
 
