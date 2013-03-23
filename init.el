@@ -148,6 +148,10 @@
 (add-hook 'scheme-mode-hook 'idle-highlight-mode)
 (add-hook 'emacs-lisp-mode-hook 'idle-highlight-mode)
 
+;; markdown
+(require 'markdown-mode)
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
 ;; show-paren-mode
 (show-paren-mode)
 
