@@ -89,6 +89,9 @@
 (require 'expand-region)
 (global-set-key (kbd "C-'") 'er/expand-region)
 
+;; comments
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region)
+
 ;; multiple cursors
 (require 'multiple-cursors)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
